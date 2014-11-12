@@ -11,6 +11,22 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson; // converts POJO to JSON and back again
+import java.util.Random;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+@Path( "equation" )
+public class ConvertJson
+{
+   static Random randomObject = new Random(); 
+
+   @GET
+   @Path( "{operation}/{level}" )
+   @Produces( "application/json" )
+
 /**
  *
  * @author clayton.fonseca
